@@ -103,19 +103,19 @@ let utenti = [
     Nome: "Nicki Brooks",
     Valutazione: 4.5,
     Feedback: "Il viaggio è stato fantastico! Organizzazione impeccabile e luoghi meravigliosi. Grazie!",
-    Immagine: "utente1.jpg"
+    Immagine: "./assets/utente1.jpg"
   },
   {
     Nome: "Liam Johnson ",
     Valutazione: 5.0,
     Feedback: "Esperienza indimenticabile! Il personale è stato eccezionale e la destinazione era oltre le aspettative. Consiglio vivamente!",
-    Immagine: "utente3.jpg"
+    Immagine: "./assets/utente3.jpg"
   },
   {
     Nome: "Terry White",
     Valutazione: 3.8,
     Feedback: "Il viaggio è stato nel complesso buono, ma ci sono stati alcuni problemi con l'alloggio. Spero che possiate migliorare in futuro.",
-    Immagine: "utente2.jpg"
+    Immagine: "./assets/utente2.jpg"
   }
 ]
 let c = 0
@@ -127,7 +127,7 @@ const sez_5 = document.querySelector("#sez-5 .row");
 let addCard = function(){
     for (let i = 0; i < 4; i++) {
 
-        c = Math.floor(Math.random(0,destination.length)*(destination.length+1));
+        c = Math.floor(Math.random()*(destination.length));
 
         sez_1.innerHTML += `<div class="col-6 col-md-4 col-lg-3 g-2 p-0 m-0">
         <div class="card h-100">
@@ -143,7 +143,7 @@ let addCard = function(){
     destination.splice(c,1);
     }
     for (let j = 0; j < 6; j++) {
-        c = Math.floor(Math.random(0,destination.length)*(destination.length+1))
+        c = Math.floor(Math.random()*(destination.length))
         
         sez_2.innerHTML += `<div class="col-6 col-md-4 col-lg-2 p-0 m-0">
         <div class="card h-100">
@@ -157,7 +157,8 @@ let addCard = function(){
     </div>`;
     destination.splice(c,1);
     }
-    c = Math.floor(Math.random(0,destination.length)*(destination.length+1))
+    c = Math.floor(Math.random()*(destination.length))
+
         sez_3.innerHTML += `<div class="col-7 p-0">
         <img src="${destination[c].ImgSrc}" class="w-100 h-100" alt="">
     </div>
@@ -176,7 +177,7 @@ let addCard = function(){
 </div>`;
     destination.splice(c,1);
     for (let k = 0; k < 2; k++) {
-      c = Math.floor(Math.random(0,destination.length)*(destination.length+1))
+      c = Math.floor(Math.random()*(destination.length))
       sez_4.innerHTML += `<div class="col-5 p-0 m-0">
       <div class="card h-75">
           <img src="${destination[c].ImgSrc}" class="card-img-top h-50" alt="Taj_mahal">
@@ -190,9 +191,9 @@ let addCard = function(){
   destination.splice(c,1);
     }
     for (let l = 0; l < utenti.length; l++) {
-      sez_5.innerHTML += `                <div class="col-12 w-100 d-flex">
+      sez_5.innerHTML += `<div class="col-12 w-100 d-flex">
       <div class="w-25 h-50">  
-      <img src="./assets/utente1.jpg" class="w-100 h-100" alt="utente" style="object-fit: contain;">
+      <img src="${utenti[l].Immagine}" class="w-100 h-100" alt="utente" style="object-fit: contain;">
       </div>
       <div class="d-flex  w-75 h-50 flex-column">
          
