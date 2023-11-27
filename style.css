@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Open+Sans:wght@400;600;800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'PT Sans','Open Sans', sans-serif;
+    object-fit: cover;
+}
+body{
+    margin: 0;
+    background-color: #1D435B;
+}
+main{
+    width: 90%;
+    margin-inline: auto;
+}
+.navbar img{
+    width: 100%;
+    width: 70px;
+    height: 70px;
+}
+.navbar {
+    background-color: #262161!important;
+    color: blanchedalmond;
+}
+.jumbotron{
+    background: linear-gradient(#1D435B,#9198e5);
+    min-height: 200px;
+}
+.navbar p:hover{
+    font-size: 1.1em;
+    cursor: pointer;
+}
+#sez-2 .row .card .card-body p,#sez-1 .row .card .card-body p,#sez-4 .row .card .card-body p{
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-height: 60px;
+}
+#sez-3 .card img{
+    height: 66%;
+}
+#sez-3{
+    min-height: 50%;
+}
+footer{
+    background-color: #262161!important;
+    color: antiquewhite;
+}
